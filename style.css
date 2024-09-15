@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+.container{
+    height: 50px;
+    width: 80vw;
+    background-color: hwb(300 5% 11%);
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    margin-top: 100px;
+}
+.child{
+    height: 400px;
+    width: 10px;
+    margin-top: 40px;
+    background-color: hwb(300 5% 11%);
+    position: relative;
+    transform-origin: top;
+    animation: pendulum_animate 5s linear infinite normal;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+.child .circle{
+    height: 100px;
+    width: 100px;
+    background-color: hwb(300 5% 11%);
+    border-radius: 50%;
+    position: absolute;
+    top: 95%;
+    left: -43px;
+    
+}
+
+/* single pendulum  */
+@keyframes pendulum_animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(-40deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }  
+    75%{
+        transform: rotate(40deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+} 
+
+
+
+
+
+
+
+/* .child:first-child{
+    animation: pendulum_animateleft 3s linear infinite normal;
+}
+.child:last-child{
+    animation: pendulum_animateright 3s linear infinite normal;
+     */
+    
+/* For Multiple Pendulum */
+/* @keyframes pendulum_animateleft{
+        0%{
+            transform: rotate(0deg);
+        }
+        25%{
+            transform: rotate(30deg);
+        }
+        50%{
+            transform: rotate(0deg);
+        }
+        75%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(0deg);
+        }
+    }
+    @keyframes pendulum_animateright{
+        0%{
+            transform: rotate(0deg);
+        }
+        25%{
+            transform: rotate(0deg);
+            
+        }
+        50%{
+            transform: rotate(0deg);
+        }
+        75%{
+            transform: rotate(-30deg);
+        }
+        100%{
+            transform: rotate(0deg);
+        }
+    }
+} */
